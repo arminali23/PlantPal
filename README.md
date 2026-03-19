@@ -94,7 +94,3 @@ npx expo start --web
 - Camera capture is only available on native (iOS/Android). On web, use the file upload option.
 - Push notifications are only supported on native devices.
 - All plant data is stored locally on the device — nothing is sent to a server except the image sent to the Anthropic API for identification.
-
-## License
-
-MIT

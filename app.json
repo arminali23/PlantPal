@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "plantpal",
+    "name": "PlantPal",
     "slug": "plantpal",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -9,22 +9,45 @@
     "splash": {
       "image": "./assets/splash-icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#F0FDF4"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "PlantPal uses the camera to photograph and identify your plants.",
+        "NSPhotoLibraryUsageDescription": "PlantPal accesses your photo library to identify plants from existing photos.",
+        "NSMicrophoneUsageDescription": "PlantPal may use the microphone when accessing the camera."
+      }
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#F0FDF4",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.VIBRATE",
+        "android.permission.POST_NOTIFICATIONS"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/icon.png",
+          "color": "#22C55E"
+        }
+      ]
+    ],
+    "scheme": "plantpal"
   }
 }
